@@ -10,10 +10,12 @@
     <%= javascript_importmap_tags %>
   </head>
   <body class="bg-gray-50">
-  <%# Nav bar %>
-    <%= partial: "layouts/navbar" %>
-  
-  <%# Content %>
+    <%# Nav bar %>
+    <%= render partial: "layouts/navbar" %>
+    <%# Flash messages %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%# Content %>
     <main class="container mx-auto  px-5 ">
       <%= yield %>
     </main>
