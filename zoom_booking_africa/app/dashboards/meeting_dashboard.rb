@@ -82,4 +82,9 @@ class MeetingDashboard < Administrate::BaseDashboard
   # def display_resource(meeting)
   #   "Meeting ##{meeting.id}"
   # end
+
+  def display_resource(meeting)
+    meeting.topic.truncate(20)
+  end
+
 end

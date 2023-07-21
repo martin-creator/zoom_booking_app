@@ -4,6 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  
+  default_scope -> { order(created_at: :desc) }
+
   validates :full_name, presence: true , length: { maximum: 50 }
 
   has_many :bookings
