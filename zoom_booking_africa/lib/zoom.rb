@@ -11,10 +11,11 @@ module Zoom
     def create_meeting(payload)
       begin
         access_token = get_access_token()
+        puts access_token
         response = HTTP.post(
           "https://api.zoom.us/v2/users/#{USER_ID}/meetings",
           headers: { authorization: access_token },
-          json: payload
+          json: payload,
         )
       rescue Exception => e
         puts e.message
@@ -22,28 +23,30 @@ module Zoom
     end
 
     def update_meeting(meeting_id, payload)
-        begin
-            access_token = get_access_token()
-            response = HTTP.patch(
-            "https://api.zoom.us/v2/meetings/#{meeting_id}",
-            headers: { authorization: access_token },
-            json: payload
-            )
-        rescue Exception => e
-            puts e.message
-        end
+      begin
+        access_token = get_access_token()
+        response = HTTP.patch(
+          "https://api.zoom.us/v2/meetings/#{meeting_id}",
+          headers: { authorization: access_token },
+          json: payload,
+        )
+      rescue Exception => e
+        puts e.message
+      end
     end
 
     private
 
     def get_access_token()
       url = "https://zoom.us/oauth/token"
-      auth = Base64.strict_encode64("#{CLIENT_ID}:#{CLIENT_SECRET}")
-      response = HTTP.post(url, :form => {
-                                  :grant_type => "account_credentials",
-                                }, :headers => {
-                                  "Authorization" => "Basic #{auth}",
-                                })
+      auth  = "Basic " + Base64.encode64("#{CLIENT_ID}:#{CLIENT_SECRET}").delete("\n")
+      response = HTTP.post(
+        "https://zoom.us/oauth/token",
+        headers: { authorization: auth },
+        params: { grant_type: "account_credentials",
+                  account_id: ACCOUNT_ID },
+
+      )
 
       data = response.parse
       access_token = "Bearer #{data["access_token"]}"

@@ -54,6 +54,8 @@ gem "administrate", github: "thoughtbot/administrate", branch: "main" # v0.17.0
 # use http
 gem "http"
 
+# use base64
+gem "base64"
 # Use Sass to process CSS
 # gem "sassc-rails"
 
