@@ -7,6 +7,28 @@ class Meeting < ApplicationRecord
     validates :start_time, presence: true
     validates :duration, presence: true
 
+    default_scope { order(start_time: :desc) }
+
+    scope :upcoming, -> { where("start_time > ?", Date.today ) }
+
+
+    def is_premium
+        return self.price > 0
+    end
+
+    def show_start_time
+        "#{self.start_time.to_datetime.strftime('%Y-%m-%dT%H:%M:%S') }"
+    end
+
+    def show_price
+        if self.price == 0
+            return "Free"
+        else
+            return "$#{self.price}"
+        end
+    end
+
+
     after_create :create_zoom_meeting
     after_update :update_zoom_meeting
 
