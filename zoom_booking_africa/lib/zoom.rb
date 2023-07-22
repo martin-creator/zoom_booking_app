@@ -22,6 +22,16 @@ module Zoom
     end
 
     def update_meeting(meeting_id, payload)
+        begin
+            access_token = get_access_token()
+            response = HTTP.patch(
+            "https://api.zoom.us/v2/meetings/#{meeting_id}",
+            headers: { authorization: access_token },
+            json: payload
+            )
+        rescue Exception => e
+            puts e.message
+        end
     end
 
     private
