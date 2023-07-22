@@ -8,7 +8,7 @@ class Meeting < ApplicationRecord
     validates :duration, presence: true
 
     after_create :create_zoom_meeting
-    after_create :update_zoom_meeting
+    after_update :update_zoom_meeting
 
     def create_zoom_meeting
         payload = {
@@ -31,9 +31,22 @@ class Meeting < ApplicationRecord
         self.save
     end
 
+
     def update_zoom_meeting
         puts "Updating zoom meeting >>>>>>>>>>>>>>>>>>>>>>"
-        puts self.topic
+        
+        payload = {
+            topic: self.topic,
+            password: self.password,
+            start_time: self.start_time.to_datetime.strftime("%Y-%m-%dT%H:%M:%S"),
+            duration: self.duration,
+        }
+
+        # update a zoom meeting on zoom server
+        puts "Updating zoom meeting >>>>>>>>>>>>>>>>>>>>>>"
+        puts "Zoom id: #{self.zoom_id}"
+        Zoom::MeetingService.new.update_meeting(self.zoom_id, payload)
+        
     end
 
 end
