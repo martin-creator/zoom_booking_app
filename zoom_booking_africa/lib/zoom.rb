@@ -3,10 +3,10 @@ require "base64"
 
 module Zoom
   class MeetingService
-    ACCOUNT_ID = "F5SWzrhdT6S60Zd8DkY-aA"
-    CLIENT_ID = "UfTsLmc8TXSXFg_p5NBJhg"
-    CLIENT_SECRET = "oGiL5VBtVv8egGsGqgbXbk8u3h6SwARY"
-    USER_ID = "aflSj9rETLSKD8FGU3Fu5g"
+    ACCOUNT_ID = Rails.application.credentials.zoom[:account_id]
+    CLIENT_ID = Rails.application.credentials.zoom[:client_id]
+    CLIENT_SECRET = Rails.application.credentials.zoom[:client_secret]
+    USER_ID = Rails.application.credentials.zoom[:user_id]
 
     def create_meeting(payload)
       begin
@@ -39,7 +39,7 @@ module Zoom
 
     def get_access_token()
       url = "https://zoom.us/oauth/token"
-      auth  = "Basic " + Base64.encode64("#{CLIENT_ID}:#{CLIENT_SECRET}").delete("\n")
+      auth = "Basic " + Base64.encode64("#{CLIENT_ID}:#{CLIENT_SECRET}").delete("\n")
       response = HTTP.post(
         "https://zoom.us/oauth/token",
         headers: { authorization: auth },
