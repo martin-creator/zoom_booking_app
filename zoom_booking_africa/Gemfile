@@ -51,6 +51,9 @@ gem "devise", github: "heartcombo/devise", branch: "main" # v4.9.0alpha
 # use administrate for admin dashboard
 gem "administrate", github: "thoughtbot/administrate", branch: "main" # v0.17.0
 
+# use http
+gem "http"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
