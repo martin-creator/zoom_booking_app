@@ -14,6 +14,8 @@ class PagesController < ApplicationController
 
   def dashboard
     @my_upcoming_meetings = Meeting.upcoming.joins(:bookings).where("bookings.user_id = ?", current_user.id)
+
+    @my_bookings = current_user.bookings
   end
 
   def thank_you
