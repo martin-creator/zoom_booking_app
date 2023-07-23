@@ -1,5 +1,4 @@
 class PagesController < ApplicationController
-
   before_action :authenticate_user!, only: [:dashboard, :receipt]
 
   def home
@@ -20,21 +19,19 @@ class PagesController < ApplicationController
 
   def receipt
     @booking = current_user.bookings.where(id: params[:booking_id]).first
-
-    if @booking.nil?
+  
+    if @booking
       respond_to do |format|
         format.html
         format.pdf do
-          render pdf: "booking_#{@booking.id}", template: "pages/receipt", formats: [:html]  # Excluding ".pdf" extension.
+          render pdf: "booking_#{@booking.id}", template: "pages/receipt", formats: [:html], disposition: "attachment"# Excluding ".pdf" extension.
         end
       end
     else
-
-      redirect_to_dashboard
-      
+      redirect_to dashboard_path
     end
-  
   end
+  
 
   def thank_you
   end
