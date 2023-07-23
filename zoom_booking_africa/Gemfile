@@ -56,6 +56,12 @@ gem "http"
 
 # use base64
 gem "base64"
+
+# use wicked_pdf
+gem "wicked_pdf"
+
+# use wkhtmltopdf-binary
+gem "wkhtmltopdf-binary"
 # Use Sass to process CSS
 # gem "sassc-rails"
 
