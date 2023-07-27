@@ -62,6 +62,9 @@ gem "wicked_pdf"
 
 # use wkhtmltopdf-binary
 gem "wkhtmltopdf-binary"
+
+# use stripe
+gem 'stripe', '8.2.0'
 # Use Sass to process CSS
 # gem "sassc-rails"
 
