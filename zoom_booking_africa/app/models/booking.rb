@@ -6,6 +6,13 @@ class Booking < ApplicationRecord
     "#{self.created_at.to_datetime.strftime(" %a, %b, %d - %I:%M %p ")}(AEDT)"
   
   end
+
+  after_create :send_confirmation_email
+
+  private
+  def send_confirmation_email
+    PayMailer.confirm(self).deliver_now
+  end
   
 end
 

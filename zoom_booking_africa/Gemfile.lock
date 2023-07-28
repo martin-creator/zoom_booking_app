@@ -170,6 +170,7 @@ GEM
       net-imap
       net-pop
       net-smtp
+    mailtrap (1.2.1)
     marcel (1.0.2)
     matrix (0.4.2)
     method_source (1.0.0)
@@ -307,6 +308,7 @@ DEPENDENCIES
   http
   importmap-rails
   jbuilder
+  mailtrap
   puma (~> 5.0)
   rails (~> 7.0.5)
   redis (~> 4.0)

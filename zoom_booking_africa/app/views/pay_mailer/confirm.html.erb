@@ -1,0 +1,15 @@
+<h1> Hi,  <%= @booking.user.full_name.split.first %> </h1><br/>
+
+<p>
+Thank you for joining my event! Here are the details
+</p>
+
+<p>
+Date: <%= @booking.meeting.show_start_time %><br/>
+Topic: <%= @booking.meeting.topic %><br/>
+Duration: <%= @booking.meeting.duration %> minutes<br/>
+</p>
+
+<p>
+<strong> MeetPlanner Team</strong>
+</p>

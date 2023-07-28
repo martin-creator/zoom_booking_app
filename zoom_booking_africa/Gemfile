@@ -65,6 +65,9 @@ gem "wkhtmltopdf-binary"
 
 # use stripe
 gem 'stripe', '8.2.0'
+
+# use mailtrap
+gem 'mailtrap'
 # Use Sass to process CSS
 # gem "sassc-rails"
 
