@@ -73,10 +73,9 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :user_name => "api",
-    :password => Rails.application.credentials.mailtrap(:mailtrap_api_key),
-    :address => "live.smtp.mailtrap.io",
-    :host => "live.smtp.mailtrap.io",
-    :port => "587",
+    :password => ENV["mailtrap_api_key"].to_s,  # Use the correct namespace :mail,  # Removed the dot after mailtrap
+    :address => "smtp.mailtrap.io",  # Changed "live.smtp.mailtrap.io" to "smtp.mailtrap.io"
+    :port => 587,  # Removed the quotes around the port number
     :authentication => :plain,
     :enable_starttls_auto => true,
   }
