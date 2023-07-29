@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   post 'purchase', to: 'pays#purchase'
   post 'join', to: 'pays#join_free'
   post 'webhook', to: 'pays#webhook'
+  post 'generate_signature', to: 'pages#generate_signature'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

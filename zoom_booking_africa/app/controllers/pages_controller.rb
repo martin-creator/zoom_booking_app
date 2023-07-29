@@ -1,5 +1,6 @@
+require 'jwt'
 class PagesController < ApplicationController
-  before_action :authenticate_user!, only: [:dashboard, :receipt, :zoom, :thank_you]
+  before_action :authenticate_user!, only: [:dashboard, :receipt, :zoom, :thank_you, :generate_signature]
 
   def home
     @meetings = Meeting.upcoming
@@ -43,4 +44,32 @@ class PagesController < ApplicationController
     @meeting = Meeting.find(params[:meeting_id])
 
   end
+
+  def generate_signature
+    mn = params[:meetingNumber]
+
+    # Generate the Zoom SDK signature
+    iat = Time.now.to_i - 30
+    exp = iat + 60 * 60 * 2
+
+    header = {
+      alg: 'HS256',
+      typ: 'JWT'
+    }
+
+    payload = {
+      sdkKey: Figaro.env.client_id,
+      mn: mn,
+      role: 0,
+      iat: iat,
+      exp: exp,
+      appKey: Figaro.env.client_id,
+      tokenExp: exp
+    }
+
+    # Encode the header and payload
+    signature = JWT.encode(payload, Figaro.env.client_secret , "HS256", header)
+    render json: {signature: signature}, status: 200
+  end
+
 end
