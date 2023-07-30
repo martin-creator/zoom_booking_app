@@ -24,5 +24,17 @@
     <main class="container mx-auto  px-5 ">
       <%= yield %>
     </main>
+    <script>
+      if (!crossOriginIsolated) SharedArrayBuffer = ArrayBuffer;
+    </script>
+    <!-- For Component and Client View -->
+    <script src="https://source.zoom.us/2.14.0/lib/vendor/react.min.js"></script>
+    <script src="https://source.zoom.us/2.14.0/lib/vendor/react-dom.min.js"></script>
+    <script src="https://source.zoom.us/2.14.0/lib/vendor/redux.min.js"></script>
+    <script src="https://source.zoom.us/2.14.0/lib/vendor/redux-thunk.min.js"></script>
+    <script src="https://source.zoom.us/2.14.0/lib/vendor/lodash.min.js"></script>
+    <!-- For Client View -->
+    <script src="https://source.zoom.us/zoom-meeting-2.14.0.min.js"></script>
+    <%# <script type="text/javascript" src="client-view.js"></script> %>
   </body>
 </html>

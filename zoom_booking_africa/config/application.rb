@@ -19,5 +19,13 @@ module ZoomBookingAfrica
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
     config.eager_load_paths << Rails.root.join("lib") # this line loads the lib folder
+
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins "http://localhost:3000"
+        resource "*", headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head],
+                      expose: ["Cross-Origin-Embedder-Policy", "Cross-Origin-Opener-Policy"]
+      end
+    end
   end
 end
