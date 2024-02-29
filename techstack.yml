@@ -2,7 +2,7 @@ repo_name: martin-creator/zoom_booking_app
 report_id: 400b83bc4855df98fe765032347e38c6
 version: 0.1
 repo_type: Public
-timestamp: '2024-02-04T08:00:34+00:00'
+timestamp: '2024-02-29T19:51:45+00:00'
 requested_by: martin-creator
 provider: github
 branch: master
@@ -44,7 +44,7 @@ tools:
   last_updated_by: martin-creator
   last_updated_on: 2023-07-17 09:45:59.000000000 Z
 - name: Swift
-  description: 'An innovative new programming language for Cocoa and Cocoa Touch. '
+  description: An innovative new programming language for Cocoa and Cocoa Touch.
   website_url: https://developer.apple.com/swift/
   license: Apache-2.0
   open_source: true
@@ -333,6 +333,13 @@ tools:
   detection_source: zoom_booking_africa/Gemfile
   last_updated_by: martin-creator
   last_updated_on: 2023-07-29 13:06:02.000000000 Z
+  vulnerabilities:
+  - name: Rack CORS Middleware has Insecure File Permissions
+    cve_id: CVE-2024-27456
+    cve_url: https://github.com/advisories/GHSA-785g-282q-pwvx
+    detected_date: Feb 27
+    severity: moderate
+    first_patched: 
 - name: selenium-webdriver
   description: WebDriver is a tool for writing automated tests of websites
   package_url: https://rubygems.org/selenium-webdriver
