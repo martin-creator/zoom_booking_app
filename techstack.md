@@ -3,21 +3,21 @@
 ## Tech Stack
 martin-creator/zoom_booking_app is built on the following main stack:
 
-- [Twilio SendGrid](http://sendgrid.com) – Transactional Email
-- [Stripe](https://stripe.com) – Payment Services
-- [Heroku](https://www.heroku.com) – Platform as a Service
-- [Ruby](https://www.ruby-lang.org) – Languages
-- [Rails](http://rubyonrails.org/) – Frameworks (Full Stack)
-- [Swift](https://developer.apple.com/swift/) – Languages
-- [Redis](http://redis.io/) – In-Memory Databases
-- [Puma](http://puma.io/) – Web Servers
-- [SQLite](http://www.sqlite.org/) – Databases
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
-- [Devise](https://github.com/plataformatec/devise) – User Management and Authentication
+- [Ruby](https://www.ruby-lang.org) – Languages
+- [Swift](https://developer.apple.com/swift/) – Languages
+- [Rails](http://rubyonrails.org/) – Frameworks (Full Stack)
+- [Redis](http://redis.io/) – In-Memory Databases
+- [SQLite](http://www.sqlite.org/) – Databases
 - [Capybara](http://jnicklas.github.io/capybara/) – Testing Frameworks
-- [Shell](https://en.wikipedia.org/wiki/Shell_script) – Shells
-- [JSON Web Token](http://jwt.io/) – User Management and Authentication
+- [Puma](http://puma.io/) – Web Servers
+- [Heroku](https://www.heroku.com) – Platform as a Service
+- [Stripe](https://stripe.com) – Payment Services
+- [Twilio SendGrid](http://sendgrid.com) – Transactional Email
 - [Bootsnap](https://github.com/shopify/bootsnap) – Ruby Utilities
+- [Devise](https://github.com/plataformatec/devise) – User Management and Authentication
+- [JSON Web Token](http://jwt.io/) – User Management and Authentication
+- [Shell](https://en.wikipedia.org/wiki/Shell_script) – Shells
 
 Full tech stack [here](/techstack.md)
 
@@ -27,21 +27,21 @@ Full tech stack [here](/techstack.md)
 ## Tech Stack
 martin-creator/zoom_booking_app is built on the following main stack:
 
-- <img width='25' height='25' src='https://img.stackshare.io/service/43/kQ_6nwmP.jpg' alt='Twilio SendGrid'/> [Twilio SendGrid](http://sendgrid.com) – Transactional Email
-- <img width='25' height='25' src='https://img.stackshare.io/service/97/eW6tXeq3.png' alt='Stripe'/> [Stripe](https://stripe.com) – Payment Services
-- <img width='25' height='25' src='https://img.stackshare.io/service/133/3wgIDj3j.png' alt='Heroku'/> [Heroku](https://www.heroku.com) – Platform as a Service
-- <img width='25' height='25' src='https://img.stackshare.io/service/989/ruby.png' alt='Ruby'/> [Ruby](https://www.ruby-lang.org) – Languages
-- <img width='25' height='25' src='https://img.stackshare.io/service/990/x57_Lorv.png' alt='Rails'/> [Rails](http://rubyonrails.org/) – Frameworks (Full Stack)
-- <img width='25' height='25' src='https://img.stackshare.io/service/1009/tuHsaI2U.png' alt='Swift'/> [Swift](https://developer.apple.com/swift/) – Languages
-- <img width='25' height='25' src='https://img.stackshare.io/service/1031/default_cbce472cd134adc6688572f999e9122b9657d4ba.png' alt='Redis'/> [Redis](http://redis.io/) – In-Memory Databases
-- <img width='25' height='25' src='https://img.stackshare.io/service/1055/favicon.png' alt='Puma'/> [Puma](http://puma.io/) – Web Servers
-- <img width='25' height='25' src='https://img.stackshare.io/service/1071/sqlite.jpg' alt='SQLite'/> [SQLite](http://www.sqlite.org/) – Databases
 - <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
-- <img width='25' height='25' src='https://img.stackshare.io/service/1432/devise.png' alt='Devise'/> [Devise](https://github.com/plataformatec/devise) – User Management and Authentication
+- <img width='25' height='25' src='https://img.stackshare.io/service/989/ruby.png' alt='Ruby'/> [Ruby](https://www.ruby-lang.org) – Languages
+- <img width='25' height='25' src='https://img.stackshare.io/service/1009/tuHsaI2U.png' alt='Swift'/> [Swift](https://developer.apple.com/swift/) – Languages
+- <img width='25' height='25' src='https://img.stackshare.io/service/990/x57_Lorv.png' alt='Rails'/> [Rails](http://rubyonrails.org/) – Frameworks (Full Stack)
+- <img width='25' height='25' src='https://img.stackshare.io/service/1031/default_cbce472cd134adc6688572f999e9122b9657d4ba.png' alt='Redis'/> [Redis](http://redis.io/) – In-Memory Databases
+- <img width='25' height='25' src='https://img.stackshare.io/service/1071/sqlite.jpg' alt='SQLite'/> [SQLite](http://www.sqlite.org/) – Databases
 - <img width='25' height='25' src='https://img.stackshare.io/service/2595/capybara.png' alt='Capybara'/> [Capybara](http://jnicklas.github.io/capybara/) – Testing Frameworks
-- <img width='25' height='25' src='https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png' alt='Shell'/> [Shell](https://en.wikipedia.org/wiki/Shell_script) – Shells
-- <img width='25' height='25' src='https://img.stackshare.io/service/6417/jwt-icon.png' alt='JSON Web Token'/> [JSON Web Token](http://jwt.io/) – User Management and Authentication
+- <img width='25' height='25' src='https://img.stackshare.io/service/1055/favicon.png' alt='Puma'/> [Puma](http://puma.io/) – Web Servers
+- <img width='25' height='25' src='https://img.stackshare.io/service/133/3wgIDj3j.png' alt='Heroku'/> [Heroku](https://www.heroku.com) – Platform as a Service
+- <img width='25' height='25' src='https://img.stackshare.io/service/97/eW6tXeq3.png' alt='Stripe'/> [Stripe](https://stripe.com) – Payment Services
+- <img width='25' height='25' src='https://img.stackshare.io/service/43/kQ_6nwmP.jpg' alt='Twilio SendGrid'/> [Twilio SendGrid](http://sendgrid.com) – Transactional Email
 - <img width='25' height='25' src='https://img.stackshare.io/no-img-open-source.png' alt='Bootsnap'/> [Bootsnap](https://github.com/shopify/bootsnap) – Ruby Utilities
+- <img width='25' height='25' src='https://img.stackshare.io/service/1432/devise.png' alt='Devise'/> [Devise](https://github.com/plataformatec/devise) – User Management and Authentication
+- <img width='25' height='25' src='https://img.stackshare.io/service/6417/jwt-icon.png' alt='JSON Web Token'/> [JSON Web Token](http://jwt.io/) – User Management and Authentication
+- <img width='25' height='25' src='https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png' alt='Shell'/> [Shell](https://en.wikipedia.org/wiki/Shell_script) – Shells
 
 Full tech stack [here](/techstack.md)
 
@@ -52,7 +52,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [martin-creator/zoom_booking_app](https://github.com/martin-creator/zoom_booking_app)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|32<br/>Tools used|02/04/24 <br/>Report generated|
+|32<br/>Tools used|02/29/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -255,7 +255,7 @@ Full tech stack [here](/techstack.md)
 |[http](https://rubygems.org/http)|v5.1.1|07/22/23|martin-creator |MIT|N/A|
 |[jbuilder](https://rubygems.org/jbuilder)|v2.11.5|07/17/23|martin-creator |MIT|N/A|
 |[jwt](https://rubygems.org/jwt)|v2.7.1|07/17/23|martin-creator |MIT|N/A|
-|[rack-cors](https://rubygems.org/rack-cors)|v2.0.1|07/29/23|martin-creator |MIT|N/A|
+|[rack-cors](https://rubygems.org/rack-cors)|v2.0.1|07/29/23|martin-creator |MIT|[CVE-2024-27456](https://github.com/advisories/GHSA-785g-282q-pwvx) (Moderate)|
 |[selenium-webdriver](https://rubygems.org/selenium-webdriver)|v4.10.0|07/17/23|martin-creator |Apache-2.0|N/A|
 |[sprockets-rails](https://rubygems.org/sprockets-rails)|v3.4.2|07/17/23|martin-creator |MIT|N/A|
 |[sqlite3](https://rubygems.org/sqlite3)|v1.6.3|07/17/23|martin-creator |BSD-3-Clause|N/A|
